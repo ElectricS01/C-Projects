@@ -13,12 +13,16 @@ int main(void) {
     while (getchar() != '\n')
       ;
 
-  } while (success != 1 || n < 1);
+  } while (success != 1 || n < 1 || n > 8);
 
   for (int i = 0; i < n; i++) {
     for (int ii = n - i; ii > 0; ii--) {
       printf(" ");
     }
+    for (int ii = 0; ii <= i; ii++) {
+      printf("#");
+    }
+    printf("  ");
     for (int ii = 0; ii <= i; ii++) {
       printf("#");
     }
