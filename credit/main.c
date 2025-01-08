@@ -7,9 +7,7 @@ int main(void) {
   char input[LIMIT];
   int success;
   int valid = 0;
-  int total;
-
-  total = 0;
+  int total = 0;
 
   printf("Number: ");
 
