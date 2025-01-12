@@ -31,7 +31,13 @@ int main(int argc, char *argv[]) {
   int g = atoi(argv[1]) % 26;
 
   for (int i = 0; text[i] != '\0'; i++) {
-    printf("%c", 'a' + ((text[i] - 'a' + g) % 26));
+    if (islower(text[i])) {
+      printf("%c", 'a' + ((text[i] - 'a' + g) % 26));
+    } else if (isupper(text[i])) {
+      printf("%c", 'A' + ((text[i] - 'A' + g) % 26));
+    } else {
+      printf("%c", text[i]);
+    }
   }
 
   printf("\n");
